@@ -1,0 +1,23 @@
+(* ::Package:: *)
+
+(* ::Input:: *)
+(*(*FGH calculates fast-growing hierarchy for ordinals up to w^w. Ordinals are encoded as lists of natural numbers in Wainer hierarchy.*)*)
+(*TrailingZeroN[a_]:=If[Last[a]!=0,0,1+TrailingZeroN[Delete[a,-1]]]*)
+(**)
+(*FGH[a_,n_]:=Which[a=={0},n+1,First[a]==0,FGH[Delete[a,1],n],*)
+(*Last[a]!=0,Nest[FGH[Join[Delete[a,-1],{Last[a]-1}],#]&,n,n],*)
+(*True,FGH[Join[Take[a,Length[a]-TrailingZeroN[a]-1],*)
+(*{a[[Length[a]-TrailingZeroN[a]]]-1,n},*)
+(*ConstantArray[0,TrailingZeroN[a]-1]],n]]*)
+(**)
+(*SGH[a_,n_]:=Which[a=={0},0,First[a]==0,SGH[Delete[a,1],n],*)
+(*Last[a]!=0,SGH[Join[Delete[a,-1],{Last[a]-1}],n]+1,True,*)
+(*SGH[Join[Take[a,Length[a]-TrailingZeroN[a]-1],*)
+(*{a[[Length[a]-TrailingZeroN[a]]]-1,n},*)
+(*ConstantArray[0,TrailingZeroN[a]-1]],n]]*)
+(**)
+(*SGH[{1,0,0,0,1},2]*)
+
+
+(* ::Input:: *)
+(*ss[{1},n_]:=FGH[Join[{1},ConstantArray[0,n-1]],n]*)
