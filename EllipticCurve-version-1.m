@@ -76,7 +76,7 @@
 (*CurveAdd[point1_,point2_]:=Which[point1===InfinityPoint,point2,*)
 (*point2===InfinityPoint,point1,*)
 (*point2==PointReflect[point1],InfinityPoint,*)
-(*point1[[1]]!=point1[[2]],PointReflect[PointCurveNegAdd[point1,point2]],*)
+(*point1[[1]]!=point2[[1]],PointReflect[PointCurveNegAdd[point1,point2]],*)
 (*point1==point2,PointReflect[PointNegativeDouble[point1]]]*)
 (**)
 (*CurveMulNum[point_,n_]:=Which[n==0,{0,0},n==1,point,n>1,*)
